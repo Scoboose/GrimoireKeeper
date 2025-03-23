@@ -1,0 +1,13 @@
+## Interface: 11200
+## Title: GrimoireKeeper
+## Notes: Tracks which grimoires your warlock pets have learned.
+## Notes-ruRU: Отслеживает, какие гримуары были изучены вашим демоном.
+## Author: Artur91425
+## Version: 3.6
+
+## X-Date: 18.10.2018
+## X-Credits: Original autor Ayradyss
+## X-Category: Warlock
+## X-Website: https://vk.com/id65515748
+
+GrimoireKeeper.lua
