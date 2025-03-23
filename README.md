@@ -1,4 +1,8 @@
 # GrimoireKeeper
+Fixed for turtle WoW
+Forked from [GrimoireKeeper](https://gitlab.com/Artur91425/GrimoireKeeper)
+
+
 [1.12.1] Tracks which grimoires your warlock pets have learned.
 
 ## Installation

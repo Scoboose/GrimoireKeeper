@@ -121,11 +121,20 @@ end
 function GrimoireKeeper:UpdateGrimoireData()
   GrimoireDB = {}
   for spellTexture, spellRank in pairs(DemonSpellTable) do
-    for i=1, spellRank do
-      local GrimoireID = GrimoireTable[self.demonType][spellTexture][i]
-      if GrimoireID then
-        GrimoireDB[GrimoireID] = true
+    -- Check if the spellTexture exists in the table for this demon type
+    if GrimoireTable[self.demonType] and GrimoireTable[self.demonType][spellTexture] then
+      for i=1, spellRank do
+        -- Check if the index exists before trying to access it
+        if GrimoireTable[self.demonType][spellTexture][i] then
+          local GrimoireID = GrimoireTable[self.demonType][spellTexture][i]
+          if GrimoireID then
+            GrimoireDB[GrimoireID] = true
+          end
+        end
       end
+    else
+      -- Debug info if needed
+      -- DEFAULT_CHAT_FRAME:AddMessage("Missing spell texture: " .. spellTexture .. " for " .. (self.demonType or "unknown demon"))
     end
   end
 end
