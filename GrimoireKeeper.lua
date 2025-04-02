@@ -58,8 +58,11 @@ GrimoireKeeper:RegisterEvent('PET_BAR_UPDATE')
 GrimoireKeeper.hooks = {}
 
 function GrimoireKeeper:MERCHANT_SHOW()
-  if MerchantItem1ItemButton:GetRegions():GetTexture() == 'Interface\\Icons\\INV_Misc_Book_06' then
+  -- print("Merchant Open") -- Debug
+  -- print(MerchantItem1ItemButton:GetRegions():GetTexture()) -- Debug
+  if MerchantItem1ItemButton:GetRegions():GetTexture() == 'Interface\\Icons\\inv_misc_book_06' then
     self.isDemonVendor = true
+    -- print("At Demon Trainer") -- Debug
   end
   if not self.isDemonVendor or not self.demonType or not HasPetUI() then return end
 
